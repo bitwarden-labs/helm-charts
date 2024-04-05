@@ -79,6 +79,10 @@ spec:
           mountPath: /etc/bitwarden/logs
           subPath: admin
         {{- end }}
+        {{- if .Values.volume.ca-certificates.enabled }}
+        - name: ca-certificates
+          mountPath: /etc/bitwarden/ca-certificates
+        {{- end }}
         {{- if .Values.secrets.secretProviderClass }}
         - name: secrets-store-inline
           mountPath: "/mnt/secrets-store"
@@ -97,6 +101,10 @@ spec:
         - name: applogs
           persistentVolumeClaim:
             claimName: {{ default ( include "bitwarden.applogs" . ) .Values.volume.logs.existingClaim }}
+        {{- if .Values.volume.ca-certificates.enabled }}
+        - name: ca-certificates
+          persistentVolumeClaim:
+            claimName: {{ default ( include "bitwarden.ca-certificates" . ) .Values.volume.ca-certificates.existingClaim }}
         {{- end }}
         {{- if .Values.secrets.secretProviderClass }}
         - name: secrets-store-inline

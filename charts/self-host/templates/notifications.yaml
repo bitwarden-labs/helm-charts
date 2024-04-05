@@ -80,6 +80,10 @@ spec:
           mountPath: /etc/bitwarden/logs
           subPath: notifications
         {{- end }}
+        {{- if .Values.volume.ca-certificates.enabled }}
+        - name: ca-certificates
+          mountPath: /etc/bitwarden/ca-certificates
+        {{- end }}
         securityContext:
 {{ toYaml .Values.component.notifications.securityContext | indent 10 }}
       volumes:
@@ -95,6 +99,11 @@ spec:
         - name: applogs
           persistentVolumeClaim:
             claimName: {{ default ( include "bitwarden.applogs" . ) .Values.volume.logs.existingClaim }}
+        {{- end }}
+        {{- if .Values.volume.ca-certificates.enabled }}
+        - name: ca-certificates
+          persistentVolumeClaim:
+            claimName: {{ default ( include "bitwarden.ca-certificates" . ) .Values.volume.ca-certificates.existingClaim }}
         {{- end }}
 
 ---
