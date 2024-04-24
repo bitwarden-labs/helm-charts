@@ -75,9 +75,9 @@ spec:
           mountPath: "/mnt/secrets-store"
           readOnly: true
         {{- end }}
-        {{- if .Values.volume.ca-certificates.enabled }}
+        {{- if .Values.volume.ca_certificates.enabled }}
         - name: ca-certificates
-          mountPath: /etc/bitwarden/ca-certificates
+          mountPath: /etc/bitwarden.ca_certificates
         {{- end }}
         {{- if .Values.volume.logs.enabled }}
         - name: applogs
@@ -95,10 +95,10 @@ spec:
             volumeAttributes:
               secretProviderClass: {{ .Values.secrets.secretProviderClass }}
         {{- end }}
-        {{- if .Values.volume.ca-certificates.enabled }}
+        {{- if .Values.volume.ca_certificates.enabled }}
         - name: ca-certificates
           persistentVolumeClaim:
-            claimName: {{ default ( include "bitwarden.ca-certificates" . ) .Values.volume.ca-certificates.existingClaim }}
+            claimName: {{ default ( include "bitwarden.ca_certificates" . ) .Values.volume.ca_certificates.existingClaim }}
         {{- end }}
         {{- if .Values.volume.logs.enabled }}
         - name: applogs
