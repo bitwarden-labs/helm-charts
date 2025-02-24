@@ -361,6 +361,17 @@ volume:
     # storageClass: "shared-storage"
     size: 1Gi
     labels: {}
+  ca_certificates:
+    # Extra root certificates are disabled by default
+    enabled: false
+    # Use an existing PVC by specifying the name.
+    # existingClaim: claimName
+    # Override the accessMode specified in general.volumeAccessMode
+    # accessMode: ReadWriteOnce
+    # Override the storageClass specified in sharedStorageClassName
+    # storageClass: "shared-storage"
+    size: 1Gi
+    labels: {}
 
 #
 # Configure service account for pre- and post-install hooks
