@@ -62,6 +62,7 @@ spec:
       securityContext:
 {{ toYaml .Values.database.podSecurityContext | indent 8 }}
     {{- end }}
+      {{- include "bitwarden.imagePullSecrets" . | nindent 6 }}
       containers:
         - name: {{ template "bitwarden.mssql" . }}
           image: "{{ .Values.database.image.name | default .Values.database.image.repository }}:{{ .Values.database.image.tag }}"

@@ -90,6 +90,7 @@ spec:
           - name: mssql-data
             mountPath: /db
           {{- end }}
+      {{- include "bitwarden.imagePullSecrets" . | nindent 6 }}
       containers:
       - name: migrate-db
         env:

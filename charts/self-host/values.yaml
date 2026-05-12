@@ -5,6 +5,11 @@ nameOverride: ""
 general:
   # Domain name for the service
   domain: "REPLACE"
+  # Optional - Pull secrets to attach to every Pod and Job, for private OCI
+  # registries (Harbor, Artifactory, ECR, GAR, ACR, etc.).
+  # Each entry is a Kubernetes LocalObjectReference, e.g.: [{name: my-registry}]
+  # Default [] renders nothing - zero diff vs. previous behaviour.
+  imagePullSecrets: []
   # Database provider type, mssql is the default.
   # Use "postgres" when providing your own PostgreSQL database.
   #  - Requires globalSettings__postgreSql__connectionString to exist in the configured secret.

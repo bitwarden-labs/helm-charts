@@ -62,6 +62,7 @@ spec:
       securityContext:
 {{ toYaml .Values.component.attachments.podSecurityContext | indent 8 }}
     {{- end }}
+      {{- include "bitwarden.imagePullSecrets" . | nindent 6 }}
       containers:
       - name: {{ template "bitwarden.attachments" . }}
         image: "{{ .Values.component.attachments.image.name | default .Values.component.attachments.image.repository }}:{{ .Values.component.attachments.image.tag | default .Values.general.coreVersionOverride | default (include "bitwarden.coreVersionDefault" nil) }}"

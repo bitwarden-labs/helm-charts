@@ -1,0 +1,5 @@
+# CI fixture: validates that general.imagePullSecrets renders on every Pod.
+general:
+  domain: ci.example.com
+  imagePullSecrets:
+    - name: ci-registry-pull

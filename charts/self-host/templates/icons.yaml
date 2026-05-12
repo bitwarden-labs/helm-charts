@@ -76,6 +76,7 @@ spec:
           - name: applogs
             mountPath: /logs
     {{- end }}
+      {{- include "bitwarden.imagePullSecrets" . | nindent 6 }}
       containers:
       - name: {{ template "bitwarden.icons" . }}
         image: "{{ .Values.component.icons.image.name | default .Values.component.icons.image.repository }}:{{ .Values.component.icons.image.tag | default .Values.general.coreVersionOverride | default (include "bitwarden.coreVersionDefault" nil) }}"
