@@ -75,6 +75,13 @@ spec:
         volumeMounts:
           - name: applogs
             mountPath: /logs
+        {{- with .Values.component.notifications.extraVolumeMounts }}
+{{ toYaml . | indent 10 }}
+        {{- end }}
+        {{- if .Values.component.notifications.securityContext }}
+        securityContext:
+{{ toYaml .Values.component.notifications.securityContext | indent 10 }}
+        {{- end }}
     {{- end }}
       containers:
       - name: {{ template "bitwarden.notifications" . }}
