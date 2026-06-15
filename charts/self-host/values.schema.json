@@ -19,6 +19,18 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
+              "type": "string"
+            },
             "extraEnv": {
               "description": "Extra environment variables to add to the container",
               "items": {
@@ -254,6 +266,18 @@
               "default": "RollingUpdate",
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
+              "type": "string"
+            },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
               "type": "string"
             },
             "extraEnv": {
@@ -513,6 +537,18 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
+              "type": "string"
+            },
             "extraEnv": {
               "description": "Extra environment variables to add to the container",
               "items": {
@@ -742,6 +778,18 @@
               "default": "RollingUpdate",
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
+              "type": "string"
+            },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
               "type": "string"
             },
             "extraEnv": {
@@ -982,6 +1030,18 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
+              "type": "string"
+            },
             "extraEnv": {
               "description": "Extra environment variables to add to the container",
               "items": {
@@ -1211,6 +1271,18 @@
               "default": "RollingUpdate",
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
+              "type": "string"
+            },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
               "type": "string"
             },
             "extraEnv": {
@@ -1470,6 +1542,18 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
+              "type": "string"
+            },
             "extraEnv": {
               "description": "Extra environment variables to add to the container",
               "items": {
@@ -1701,6 +1785,18 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
+              "type": "string"
+            },
             "enabled": {
               "default": false,
               "description": "SCIM is disabled by default.  To use this service, enable it below and set an appropriate Ingress path",
@@ -1872,6 +1968,18 @@
               "default": "RollingUpdate",
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
+              "type": "string"
+            },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
               "type": "string"
             },
             "extraEnv": {
@@ -2124,6 +2232,18 @@
               "default": "RollingUpdate",
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
+              "type": "string"
+            },
+            "dnsConfig": {
+              "default": {},
+              "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+              "title": "dnsConfig",
+              "type": "object"
+            },
+            "dnsPolicy": {
+              "default": "",
+              "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+              "title": "dnsPolicy",
               "type": "string"
             },
             "extraEnv": {
@@ -2638,6 +2758,18 @@
           "required": [],
           "title": "distributedCache",
           "type": "object"
+        },
+        "dnsConfig": {
+          "default": {},
+          "description": "Pod spec.dnsConfig. Use on clusters where the default ndots:5 plus corporate DNS search domains break outbound resolution from the Alpine/musl images (e.g. set options ndots:\"2\"). Override per component under component.<name>.dnsConfig.",
+          "title": "dnsConfig",
+          "type": "object"
+        },
+        "dnsPolicy": {
+          "default": "",
+          "description": "Pod DNS policy. Empty uses the Kubernetes default (ClusterFirst). Override per component under component.<name>.dnsPolicy.",
+          "title": "dnsPolicy",
+          "type": "string"
         },
         "domain": {
           "default": "REPLACE",
